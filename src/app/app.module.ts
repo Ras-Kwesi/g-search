@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
@@ -11,6 +12,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
   ],
   imports: [
     BrowserModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
