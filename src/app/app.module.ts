@@ -4,15 +4,17 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    LandingPageComponent
   ],
   imports: [
-    BrowserModule
-    HttpClientModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
