@@ -1,8 +1,8 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { GithubServiceService } from './githubservice.service';
+import { GithubServiceService } from './github.service';
 
-describe('GithubServiceService', () => {
+describe('GithubService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [GithubServiceService]

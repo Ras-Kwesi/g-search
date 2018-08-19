@@ -9,7 +9,7 @@ export class GithubServiceService {
   githubService = GithubService;
 
   constructor(private http:HttpClient) {
-    this.githubservice = new GithubService ("","","",""); 
+    this.githubService = new GithubService ("","","",""); 
   }
 
     userReturn() {
@@ -18,9 +18,7 @@ export class GithubServiceService {
         login: string,
         url: string,
         name: string,
-        //followers_url: string,
-        //following_url: string, 
-        //following_url: string,
+  
       }
       const promise = new Promise((resolve)=>
       {this.http.get<ApiResponse>("https://api.github.com/users/ras-kwesi?access_token=").toPromise().then(response=>{
