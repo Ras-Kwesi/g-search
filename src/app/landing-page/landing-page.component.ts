@@ -1,31 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { User } from '../user';
+import { GithubService } from '../githubservice';
 
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  styleUrls: ['./landing-page.component.css'],
+  providers: [GithubService]
 })
 export class LandingPageComponent implements OnInit {
+  githubservice: any;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, public _serviceme: GithubService) { }
   
   ngOnInit() {
-    interface ApiResponse{
-      avatar_url: string,
-      login: string,
-      url: string,
-      name: string,
-      //followers_url: string,
-      //following_url: string, 
+    this._serviceme.userReturn();
+    this.githubservice = this._serviceme.githubservice;
+      }
     }
-
-    
-    
-    }
-  }
   
 
 
