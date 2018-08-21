@@ -3,10 +3,10 @@ import {HttpClient} from '@angular/common/http';
 import {GithubService} from '../githubservice';
 
 @Injectable({ 
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GithubServiceService {
-  githubService = GithubService;
+  githubService : GithubService;
 
   constructor(private http:HttpClient) {
     this.githubService = new GithubService ("","","",""); 

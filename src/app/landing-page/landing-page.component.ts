@@ -10,13 +10,13 @@ import { GithubService } from '../githubservice';
   providers: [GithubService]
 })
 export class LandingPageComponent implements OnInit {
-  githubservice: any;
+  githubService: any;
 
   constructor(private http:HttpClient, public _serviceme: GithubService) { }
   
   ngOnInit() {
     this._serviceme.userReturn();
-    this.githubservice = this._serviceme.githubservice;
+    this.githubService = this._serviceme.githubService;
       }
     }
   
