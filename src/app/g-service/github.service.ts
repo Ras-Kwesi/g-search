@@ -21,7 +21,7 @@ export class GithubServiceService {
   
       }
       const promise = new Promise((resolve)=>
-      {this.http.get<ApiResponse>("https://api.github.com/users/ras-kwesi?access_token=").toPromise().then(response=>{
+      {this.http.get<ApiResponse>("https://api.github.com/users/ras-kwesi?access_token=2e20d9f699505a0f0d26c8591ff727e051f85c03").toPromise().then(response=>{
         this.githubService.avatar_url = response.avatar_url;
         this.githubService.login =response.login;
         this.githubService.url =response.url;
